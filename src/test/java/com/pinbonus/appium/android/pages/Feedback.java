@@ -8,17 +8,13 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.net.URL;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-
-
-public class StartScreens {
+public class Feedback {
 
     private AppiumDriver<WebElement> driver;
 
@@ -33,7 +29,7 @@ public class StartScreens {
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("app", app.getAbsolutePath());
         capabilities.setCapability("appPackage", "com.qiwibonus");
-        capabilities.setCapability("appActivity", "com.pinbonus.ActivitySplash");
+        capabilities.setCapability("appActivity", "com.pinbonus.ActivityFeedback");
         driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
 
@@ -43,12 +39,9 @@ public class StartScreens {
     }
 
     @Test
-    public void startScreen() {
-        WebDriverWait wait = new WebDriverWait(driver, 60);
-        WebElement text = driver.findElement(By.id("tvPromoText"));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("tvPromoText")));
-        assertEquals("Все дисконтные карты\n" +
-                "любимых магазинов и ресторанов\n" +
-                "в приложении", text.getText());
+    public void viewAlerts() {
+        driver.findElement(By.id("fabAdd")).click();
+        WebElement button = driver.findElement(By.id("tvNotInList"));
+        assertTrue(button.isDisplayed());
     }
 }
