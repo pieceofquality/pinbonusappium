@@ -12,6 +12,7 @@ public class AndroidSetup {
     protected AndroidDriver driver;
 
     protected void prepareAndroidForAppium() throws MalformedURLException {
+//        File appDir = new File("D:/Projects/pinbonusappium/apps");
         File appDir = new File("D:/Projects/pinbonusappium/apps");
         File app = new File(appDir, "pinbonus.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
