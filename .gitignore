@@ -1,3 +1,5 @@
+pinbonusappium.iml
+.idea
+build
 src/main/
-target/generated-test-sources/
-/pinbonusappium.iml
+target/
