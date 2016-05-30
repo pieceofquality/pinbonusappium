@@ -177,8 +177,6 @@ public abstract class Helpers {
         driver.swipe(startx, starty, endx, starty, 500);
     }
 
-
-
 //    Close welcome session
     public static void closeWelcome() throws InterruptedException {
         Thread.sleep(5000);

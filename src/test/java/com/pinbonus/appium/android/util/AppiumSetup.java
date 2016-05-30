@@ -36,7 +36,7 @@ public class AppiumSetup {
         capabilities.setCapability("app", appPath);
         serverAddress = new URL("http://127.0.0.1:4723/wd/hub");
         driver = new AndroidDriver(serverAddress, capabilities);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Helpers.init(driver, serverAddress);
         }
 
