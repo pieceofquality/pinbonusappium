@@ -16,7 +16,6 @@ public class AuthorizationTest extends AppiumSetup{
     @Test
     public void authFails() throws InterruptedException{
         closeWelcome();
-Process process = Runtime.getRuntime().exec()
         openMenu();
         find("Войти").click();
         driver.findElementById("etPhone").sendKeys("0000000000");
