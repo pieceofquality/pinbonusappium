@@ -19,6 +19,7 @@ public class AddCardTest extends AppiumSetup {
         closeWelcome();
         addButtonTap();
         find("Adidas").click();
+        find("Номер").sendKeys("1234567890123465789");
         find("СОХРАНИТЬ").click();
         find("Нет").click();
         find("Позже").click();
@@ -31,7 +32,6 @@ public class AddCardTest extends AppiumSetup {
         closeWelcome();
         addButtonTap();
         find("Adidas").click();
-        find("Номер").sendKeys("1234567890123465789");
         find("СОХРАНИТЬ").click();
         find("Нет").click();
         find("Позже").click();
