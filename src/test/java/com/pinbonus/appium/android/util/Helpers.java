@@ -178,8 +178,8 @@ public abstract class Helpers {
     }
 
 //    Close welcome session
-    public static void closeWelcome() throws InterruptedException {
-        Thread.sleep(5000);
+    public static void closeWelcome(){
+        wait(By.id("tvPromoText"));
         swipeLeft();
         swipeLeft();
         driver.findElement(By.id("bStart")).click();

@@ -13,7 +13,7 @@ import static com.pinbonus.appium.android.util.Helpers.find;
 public class SortingCardsTest extends AppiumSetup{
 
     @Test
-    public void sortingCards() throws InterruptedException {
+    public void sortingCards() {
         closeWelcome();
         addButtonTap();
         find("Adidas").click();

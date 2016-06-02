@@ -10,7 +10,7 @@ public class CardsPage {
     public static WebElement addButton = driver.findElementById("fabAdd");
 
     //    Open sidebar
-    public static void openMenu(){
+    public static void menuButtonTap(){
         driver.findElementByAccessibilityId("Navigate up").click();
     }
 
