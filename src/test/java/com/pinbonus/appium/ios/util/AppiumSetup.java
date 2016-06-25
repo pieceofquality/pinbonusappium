@@ -29,14 +29,17 @@ public class AppiumSetup{
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("appium-version", "1.1.0");
-        capabilities.setCapability("platformVersion", "7.1");
+        capabilities.setCapability("appium-version", "1.5.3");
+        capabilities.setCapability("locale", "ru_RU");
+        capabilities.setCapability("language", "ru");
+        capabilities.setCapability("platformVersion", "9.3");
         capabilities.setCapability("platformName", "ios");
-        capabilities.setCapability("deviceName", "iPhone Simulator");
+        capabilities.setCapability("deviceName", "iPhone 4s");
         String userDir = System.getProperty("user.dir");
-        String localApp = "UICatalog6.1.app.zip";
+        String localApp = "PINbonus.app.zip";
         String appPath = Paths.get(userDir, localApp).toAbsolutePath().toString();
         capabilities.setCapability("app", appPath);
+        capabilities.setCapability("autoAcceptAlerts", true);
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Helpers.init(driver);

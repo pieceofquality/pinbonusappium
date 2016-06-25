@@ -25,9 +25,9 @@ public class AppiumSetup {
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("appium-version", "1.5.2");
+        capabilities.setCapability("appium-version", "1.5.3");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Android Emulator");
+        capabilities.setCapability("deviceName", "Nexus 4");
         capabilities.setCapability("platformVersion", "4.4");
         URL serverAddress;
         String localApp = "qiwibonus.apk";

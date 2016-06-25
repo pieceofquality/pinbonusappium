@@ -3,7 +3,7 @@ package com.pinbonus.appium.ios.tests;
 import com.pinbonus.appium.android.util.AppiumSetup;
 import org.junit.Test;
 
-import static com.pinbonus.appium.android.pages.CardsPage.openMenu;
+import static com.pinbonus.appium.ios.pages.CardsPage.openMenu;
 import static com.pinbonus.appium.android.util.Helpers.closeWelcome;
 import static com.pinbonus.appium.android.util.Helpers.find;
 

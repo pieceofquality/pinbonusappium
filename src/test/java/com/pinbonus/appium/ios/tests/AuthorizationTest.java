@@ -3,8 +3,8 @@ package com.pinbonus.appium.ios.tests;
 import com.pinbonus.appium.android.util.AppiumSetup;
 import org.junit.Test;
 
-import static com.pinbonus.appium.android.pages.CardsPage.openMenu;
 import static com.pinbonus.appium.android.util.Helpers.*;
+import static com.pinbonus.appium.ios.pages.CardsPage.openMenu;
 
 /**
  * Created by piece on 30.05.2016.
