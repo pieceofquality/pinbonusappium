@@ -1,13 +1,13 @@
 package android.tests;
 
-import android.util.AppiumSetup;
+import android.core.AppiumSetup;
 import org.junit.Test;
 
-import static pages.AddCardPage.addCard;
-import static pages.CardsPage.menuButtonTap;
-import static pages.SettingsPage.chooseCityMenu;
-import static android.util.Helpers.closeWelcome;
-import static android.util.Helpers.find;
+import static android.pages.AddCardPage.addCard;
+import static android.pages.CardsPage.menuButtonTap;
+import static android.pages.SettingsPage.chooseCityMenu;
+import static android.core.Helpers.closeWelcome;
+import static android.core.Helpers.find;
 
 
 public class CityListTest extends AppiumSetup {

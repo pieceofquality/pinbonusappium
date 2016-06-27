@@ -1,13 +1,16 @@
 package android.tests;
 
-import android.util.AppiumSetup;
+import android.core.AppiumSetup;
 import org.junit.Test;
 
 import java.io.IOException;
 
-import static pages.AddCardPage.addCard;
-import static pages.CardsPage.addButton;
-import static pages.CardsPage.menuButtonTap;
+import static android.core.Helpers.closeWelcome;
+import static android.core.Helpers.driver;
+import static android.core.Helpers.find;
+import static android.pages.AddCardPage.addCard;
+import static android.pages.CardsPage.addButton;
+import static android.pages.CardsPage.menuButtonTap;
 import static io.appium.java_client.android.AndroidKeyCode.KEYCODE_APP_SWITCH;
 
 

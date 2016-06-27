@@ -1,11 +1,11 @@
 package android.tests;
 
-import android.util.AppiumSetup;
+import android.core.AppiumSetup;
 import org.junit.Test;
 
-import static pages.CardsPage.addButtonTap;
-import static android.util.Helpers.closeWelcome;
-import static android.util.Helpers.find;
+import static android.pages.CardsPage.addButtonTap;
+import static android.core.Helpers.closeWelcome;
+import static android.core.Helpers.find;
 
 /**
  * Created by piece on 01.06.2016.

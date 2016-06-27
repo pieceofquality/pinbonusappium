@@ -1,10 +1,13 @@
 package android.tests;
 
-import android.util.AppiumSetup;
+import android.core.AppiumSetup;
 import org.junit.Test;
 
-import static pages.AddCardPage.addAnotherCard;
-import static pages.CardsPage.menuButtonTap;
+import static android.core.Helpers.closeWelcome;
+import static android.core.Helpers.driver;
+import static android.core.Helpers.find;
+import static android.pages.AddCardPage.addAnotherCard;
+import static android.pages.CardsPage.menuButtonTap;
 import static io.appium.java_client.android.Connection.AIRPLANE;
 
 public class RatingBannerTest extends AppiumSetup{

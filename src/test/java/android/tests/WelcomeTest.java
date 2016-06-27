@@ -1,8 +1,10 @@
 package android.tests;
 
-import android.util.AppiumSetup;
+import android.core.AppiumSetup;
 import org.junit.Test;
 import org.openqa.selenium.By;
+
+import static android.core.Helpers.*;
 
 
 public class WelcomeTest extends AppiumSetup {

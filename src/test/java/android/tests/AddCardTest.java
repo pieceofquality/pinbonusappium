@@ -1,14 +1,14 @@
 package android.tests;
 
-import android.util.ADB;
-import android.util.AppiumSetup;
+import android.core.ADB;
+import android.core.AppiumSetup;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import static pages.CardsPage.addButtonTap;
-import static android.util.Helpers.closeWelcome;
-import static android.util.Helpers.driver;
-import static android.util.Helpers.find;
+import static android.pages.CardsPage.addButtonTap;
+import static android.core.Helpers.closeWelcome;
+import static android.core.Helpers.driver;
+import static android.core.Helpers.find;
 
 public class AddCardTest extends AppiumSetup{
 

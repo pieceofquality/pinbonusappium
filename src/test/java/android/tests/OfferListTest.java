@@ -1,8 +1,9 @@
 package android.tests;
 
-import android.util.AppiumSetup;
+import android.core.AppiumSetup;
 import org.junit.Test;
 
+import static android.core.Helpers.*;
 import static io.appium.java_client.android.AndroidKeyCode.BACK;
 
 /**

@@ -8,14 +8,6 @@
     <artifactId>appiumtests</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-    <allure.version>1.4.23</allure.version>
-    <allure.mvn.plugin.version>2.5</allure.mvn.plugin.version>
-    <aspectj.version>1.8.9</aspectj.version>
-    <surefire.version>2.19.1</surefire.version>
-    <junit.version>4.12</junit.version>
-    </properties>
-
     <dependencies>
 
         <dependency>
@@ -25,21 +17,15 @@
         </dependency>
 
         <dependency>
-            <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>allure-junit-adaptor</artifactId>
-            <version>${allure.version}</version>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>3.6</version>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.9.10</version>
+            <version>4.12</version>
         </dependency>
 
         <dependency>
@@ -51,7 +37,7 @@
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
-            <version>1.1</version>
+            <version>1.1.1</version>
             <scope>test</scope>
         </dependency>
 
@@ -68,16 +54,6 @@
             <version>2.2.4</version>
         </dependency>
 
-        <!--
-            Sauce JUnit is contained in saucelabs/sauce-java
-            https://github.com/saucelabs/sauce-java/tree/master/junit
-           -->
-        <dependency>
-            <groupId>com.saucelabs</groupId>
-            <artifactId>sauce_junit</artifactId>
-            <version>2.1.21</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -87,33 +63,11 @@
     </dependencies>
 
     <build>
-
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.18.1</version>
-                <configuration>
-                    <argLine>
-                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
-                    </argLine>
-                    <properties>
-                        <property>
-                            <name>listener</name>
-                            <value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
-                        </property>
-                    </properties>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
-
             <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
@@ -121,33 +75,7 @@
                 <target>1.7</target>
             </configuration>
             </plugin>
-
         </plugins>
-
     </build>
-
-    <reporting>
-        <excludeDefaults>true</excludeDefaults>
-        <plugins>
-            <plugin>
-                <groupId>ru.yandex.qatools.allure</groupId>
-                <artifactId>allure-maven-plugin</artifactId>
-                <version>${allure.mvn.plugin.version}</version>
-            </plugin>
-        </plugins>
-    </reporting>
-
-    <repositories>
-        <repository>
-            <id>saucelabs-repository</id>
-            <url>https://repository-saucelabs.forge.cloudbees.com/release</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>

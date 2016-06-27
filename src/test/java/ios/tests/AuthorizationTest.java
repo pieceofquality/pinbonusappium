@@ -3,6 +3,9 @@ package ios.tests;
 import android.core.AppiumSetup;
 import org.junit.Test;
 
+import static android.core.Helpers.closeWelcome;
+import static android.core.Helpers.driver;
+import static android.core.Helpers.find;
 import static android.pages.CardsPage.menuButtonTap;
 
 /**
